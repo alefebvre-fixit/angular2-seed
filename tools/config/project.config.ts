@@ -20,8 +20,8 @@ export class ProjectConfig extends SeedConfig {
     // Add `NPM` third-party libraries to be injected/bundled.
     this.NPM_DEPENDENCIES = [
       ...this.NPM_DEPENDENCIES,
-
-            { src: 'ng2-bootstrap/bundles/ng2-bootstrap.min.js', inject: 'libs' },
+      { src: 'moment/moment.js', inject: 'libs' },
+      { src: 'ng2-bootstrap/bundles/ng2-bootstrap.min.js', inject: 'libs' },
 
       // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
       // {src: 'lodash/lodash.min.js', inject: 'libs'},
