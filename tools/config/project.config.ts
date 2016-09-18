@@ -20,7 +20,7 @@ export class ProjectConfig extends SeedConfig {
     // Add `NPM` third-party libraries to be injected/bundled.
     this.NPM_DEPENDENCIES = [
       ...this.NPM_DEPENDENCIES,
-      
+
             { src: 'ng2-bootstrap/bundles/ng2-bootstrap.min.js', inject: 'libs' },
 
       // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
@@ -30,6 +30,11 @@ export class ProjectConfig extends SeedConfig {
     // Add `local` third-party libraries to be injected/bundled.
     this.APP_ASSETS = [
       ...this.APP_ASSETS,
+      {src: `${this.CSS_SRC}/bootstrap.css`, inject: true, vendor: false},
+      {src: `${this.CSS_SRC}/collateral.css`, inject: true, vendor: false},
+      {src: `${this.CSS_SRC}/sidemenu.css`, inject: true, vendor: false},
+      {src: `${this.CSS_SRC}/font-awesome.css`, inject: true, vendor: false},
+      {src: `${this.CSS_SRC}/collateral-table.css`, inject: true, vendor: false},
       // {src: `${this.APP_SRC}/your-path-to-lib/libs/jquery-ui.js`, inject: true, vendor: false}
       // {src: `${this.CSS_SRC}/path-to-lib/test-lib.css`, inject: true, vendor: false},
     ];
