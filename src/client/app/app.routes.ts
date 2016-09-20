@@ -7,5 +7,5 @@ import { CollateralRoutes } from './collateral/index';
 export const routes: Routes = [
   ...HomeRoutes,
   ...AboutRoutes,
-  ...CollateralRoutes
+  ...CollateralRoutes,
 ];

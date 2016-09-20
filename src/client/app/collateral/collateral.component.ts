@@ -1,20 +1,26 @@
-import { Component } from '@angular/core';
-import {AlertComponent} from 'ng2-bootstrap/ng2-bootstrap';
-
-import { Config, ToolbarComponent } from '../shared/index';
+import { Component, OnInit } from '@angular/core';
+import { NameListService } from '../shared/index';
 
 /**
- * This class represents the main application component. Within the @Routes annotation is the configuration of the
- * applications routes, configuring the paths for the lazy loaded components (HomeComponent, AboutComponent).
+ * This class represents the lazy loaded HomeComponent.
  */
 @Component({
   moduleId: module.id,
-  viewProviders: [],
+  selector: 'sd-collateral',
   templateUrl: 'collateral.component.html',
   styleUrls: ['collateral.component.css'],
 })
-export class CollateralComponent {
-  constructor() {
-    console.log('Environment config', Config);
+
+export class CollateralComponent implements OnInit {
+
+
+  constructor() {}
+
+  /**
+   * Get the names OnInit
+   */
+  ngOnInit() {
   }
+
+
 }
