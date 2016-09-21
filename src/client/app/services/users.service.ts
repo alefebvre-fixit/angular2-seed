@@ -1,7 +1,6 @@
 // user.service.ts
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
 
 @Injectable()
 export class UserService {

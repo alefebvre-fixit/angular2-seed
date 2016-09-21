@@ -1,0 +1,23 @@
+.figure-negative {
+  color: #FF1CAC;
+  text-decoration: none;
+}
+
+.figure-positive {
+  color: #3390fb;
+  text-decoration: none;
+}
+
+.figure-neutral {
+  color: #666666;
+  text-decoration: none;
+}
+
+.figure-currency{
+  text-transform: uppercase;
+  color: #999999;
+}
+
+.figure{
+  font-size: 100%;
+}

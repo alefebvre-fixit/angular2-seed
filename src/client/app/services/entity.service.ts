@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import {Observable, Subject} from 'rxjs/Rx';
-import {Contact} from '../models/contact.ts';
+import {Contact} from '../models/contact';
 
 @Injectable()
 export class EntityService {

@@ -171,6 +171,12 @@ export class SeedConfig {
   TOOLS_DIR = 'tools';
 
   /**
+   * The folder of the applications css files.
+   * @type {string}
+   */
+  FONT_SRC = `${this.APP_SRC}/fonts`;
+
+  /**
    * The directory of the tasks provided by the seed.
    */
   SEED_TASKS_DIR = join(process.cwd(), this.TOOLS_DIR, 'tasks', 'seed');
