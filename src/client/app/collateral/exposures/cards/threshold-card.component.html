@@ -1,0 +1,43 @@
+<div class="panel panel-default analytics">
+    <div class="panel-heading">
+        <h4 class="panel-title analytics-title">Threshold</h4>
+    </div>
+    <div class="panel-body">
+        <table class="analytics-list">
+            <tbody>
+                <tr>
+                    <td>Value</td>
+                    <td>
+                        <figure [value]="threshold.value" [currency]="'USD'"></figure>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entity</td>
+                    <td>
+                        {{threshold.legalEntity}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rating</td>
+                    <td>
+                        {{threshold.rating}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Agency</td>
+                    <td>
+                        {{threshold.agency}}
+                    </td>
+                </tr>     
+                <tr>
+                    <td>Seniority</td>
+                    <td>
+                        {{threshold.seniority}}
+                    </td>
+                </tr>                
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer">
+    </div>
+</div>

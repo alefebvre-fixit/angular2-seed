@@ -1,0 +1,28 @@
+<section [name]="'Exposure'"></section>
+
+  <div style="background-color: white;">  
+  <tabset [justified]="false">
+    <tab heading="SUMMARY" >
+      <div class="tab-body">
+        <exposure-summary [exposure]="exposure"> </exposure-summary>
+      </div>
+    </tab>
+    <tab heading="UNDERLYINGS">
+      <div class="tab-body">
+        <exposure-underlyings></exposure-underlyings>
+      </div>
+    </tab>
+    <tab heading="COLLATERALS">
+      <div class="tab-body">
+        <exposure-collaterals></exposure-collaterals>
+      </div>
+    </tab>
+    <tab heading="ALLOCATIONS">
+      <div class="tab-body">
+        <exposure-allocations [exposure]="exposure"></exposure-allocations>
+      </div>
+    </tab>
+  </tabset>
+  </div>
+
+

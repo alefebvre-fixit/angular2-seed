@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import {DROPDOWN_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
 import { LoadingContainer, LoadingPage } from '../index';
 
 @Component({
@@ -7,9 +6,6 @@ import { LoadingContainer, LoadingPage } from '../index';
   selector: "grid",
   templateUrl: 'grid.component.html',
   styleUrls: ['grid.component.css'],
-  directives: [
-    DROPDOWN_DIRECTIVES,LoadingContainer
-  ],
   viewProviders: [],
 })
 export class GridComponent implements OnInit {

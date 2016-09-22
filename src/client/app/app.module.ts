@@ -11,9 +11,10 @@ import { AboutModule } from './about/about.module';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { CollateralModule } from './collateral/collateral.module';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, Ng2BootstrapModule, RouterModule.forRoot(routes), AboutModule, HomeModule, CollateralModule, SharedModule.forRoot()],
+  imports: [BrowserModule, HttpModule, Ng2BootstrapModule, RouterModule.forRoot(routes), AboutModule, HomeModule, CollateralModule, SharedModule.forRoot(), ChartsModule],
   declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,

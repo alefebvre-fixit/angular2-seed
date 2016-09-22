@@ -1,0 +1,44 @@
+<div class="panel panel-default analytics">
+    <div class="panel-heading">
+        <h4 class="panel-title analytics-title">Dispute</h4>
+    </div>
+    <div class="panel-body">
+        <table class="analytics-list">
+            <tbody>
+                <tr>
+                    <td>Status</td>
+                    <td>
+                        {{dispute.disputeStatus}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Reason</td>
+                    <td>
+                        {{dispute.disputeReason}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>
+                        {{dispute.disputeAge}} day(s)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Amount</td>
+                    <td>
+                        <figure [value]="dispute.disputeAmount" [currency]="'USD'"></figure>
+                    </td>
+                </tr>     
+                <tr>
+                    <td>Agreed Amount</td>
+                    <td>
+                        <figure [value]="dispute.agreedAmount" [currency]="'USD'"></figure>
+                    </td>
+                </tr>                
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer">
+        <a href="#" class="btn btn-default">Open Dispute</a>
+    </div>
+</div>

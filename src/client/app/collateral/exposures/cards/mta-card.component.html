@@ -1,0 +1,43 @@
+<div class="panel panel-default analytics">
+    <div class="panel-heading">
+        <h4 class="panel-title analytics-title">MTA</h4>
+    </div>
+    <div class="panel-body">
+        <table class="analytics-list">
+            <tbody>
+                <tr>
+                    <td>Value</td>
+                    <td>
+                        <figure [value]="mta.value" [currency]="'USD'"></figure>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entity</td>
+                    <td>
+                        {{mta.legalEntity}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rating</td>
+                    <td>
+                        {{mta.rating}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Agency</td>
+                    <td>
+                        {{mta.agency}}
+                    </td>
+                </tr>     
+                <tr>
+                    <td>Seniority</td>
+                    <td>
+                        {{mta.seniority}}
+                    </td>
+                </tr>                
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer">
+    </div>
+</div>

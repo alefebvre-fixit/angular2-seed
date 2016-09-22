@@ -1,0 +1,21 @@
+<div class="panel panel-default analytics">
+    <div class="panel-heading">
+        <h4 class="panel-title analytics-title">{{config.title}}</h4>
+    </div>
+    <div class="panel-body">
+        <table class="analytics-list ranked">
+            <tbody>
+                <tr *ngFor="let data of datas; let i = index;">
+                    <td>#{{i}}</td>
+                    <td>{{data.name}}</td>
+                    <td>
+                        <figure [value]="data.value" [currency]="data.currency"></figure>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer">
+        <a href="#" class="btn btn-default">View All</a>
+    </div>
+</div>
