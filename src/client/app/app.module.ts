@@ -12,9 +12,10 @@ import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { CollateralModule } from './collateral/collateral.module';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, Ng2BootstrapModule, RouterModule.forRoot(routes), AboutModule, HomeModule, CollateralModule, SharedModule.forRoot(), ChartsModule],
+  imports: [BrowserModule, HttpModule, Ng2BootstrapModule, RouterModule.forRoot(routes), FormsModule, AboutModule, HomeModule, ChartsModule, CollateralModule, SharedModule.forRoot()],
   declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,
