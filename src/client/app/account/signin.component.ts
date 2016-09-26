@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ROUTER_DIRECTIVES } from '@angular/router';
+import { Router } from '@angular/router';
 import { UserService } from '../services/users.service';
 import { FormGroup, FormControl } from '@angular/forms';  
-
-
-
-
 
 export class SignIn {
   constructor(
@@ -14,14 +10,10 @@ export class SignIn {
   ) {  }
 }
 
-
 @Component({
   moduleId: module.id,
   templateUrl: 'signin.component.html',
   styleUrls: ['signin.component.css'],
-  directives: [
-    ROUTER_DIRECTIVES,
-  ],
   viewProviders: [UserService],
 })
 export class SignInComponent implements OnInit {
