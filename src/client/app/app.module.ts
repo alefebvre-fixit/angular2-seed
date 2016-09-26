@@ -9,12 +9,13 @@ import { routes } from './app.routes';
 
 
 import { SharedModule } from './shared/shared.module';
+import { AccountModule } from './account/account.module';
 import { CollateralModule } from './collateral/collateral.module';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, Ng2BootstrapModule, RouterModule.forRoot(routes), FormsModule, ChartsModule, CollateralModule, SharedModule.forRoot()],
+  imports: [BrowserModule, HttpModule, Ng2BootstrapModule, RouterModule.forRoot(routes), FormsModule, ChartsModule, AccountModule, CollateralModule, SharedModule.forRoot()],
   declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,
