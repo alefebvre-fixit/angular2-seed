@@ -13,7 +13,7 @@ export class ProjectConfig extends SeedConfig {
   FONTS_DEST = `${this.APP_DEST}/fonts`;
   FONTS_SRC = [
       'node_modules/bootstrap/dist/fonts/**',
-      //'node_modules/font-awesome/fonts/**',
+      'node_modules/font-awesome/fonts/**',
   ];
 
   constructor() {
