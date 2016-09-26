@@ -9,9 +9,7 @@
 
 
     <statistics [datas]="statistics">
-            <statistics-footer>
-                <progressbar [max]="-allocation.required" [value]="allocation.allocated"></progressbar>
-            </statistics-footer>
+        <progressbar [max]="-allocation.required" [value]="allocation.allocated"></progressbar>
     </statistics>
 
   <div class="panel panel-default collateral-panel">
@@ -91,8 +89,6 @@
 </div>
 
 <grid [datas]="allocations" [config]="config" [loading]="loading">
-        <table-buttons>
-        </table-buttons>
 </grid>
 
   <br>
