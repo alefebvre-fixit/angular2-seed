@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 import { ToolbarComponent } from './toolbar/index';
 import { NavbarComponent } from './navbar/index';
 import { NameListService } from './name-list/index';
@@ -24,7 +26,7 @@ import { RemoveUndefined } from './pipes/index';
  */
 
 @NgModule({
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, RouterModule, FormsModule, Ng2BootstrapModule],
   declarations: [ToolbarComponent, NavbarComponent, SectionComponent, Statistics, FigureComponent, RemoveUndefined, RankedList, GridComponent, LoadingContainer],
   exports: [ToolbarComponent, NavbarComponent,
     CommonModule, FormsModule, RouterModule, SectionComponent, Statistics, FigureComponent, RankedList, GridComponent, LoadingContainer]

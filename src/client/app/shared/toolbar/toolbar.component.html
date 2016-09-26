@@ -1,2 +1,28 @@
-<h1>Angular 2 Seed</h1>
-<div class="more"></div>
+<nav class="navbar navbar-inverse navbar-fixed-top appbar" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+            <img alt="Calypso" src="assets/png/calypso-white.png" style="width: 30px;height: 30px;">
+        </a>
+        <a class="navbar-brand" href="#/" ng-click="vm.collapseNavbar()">Calypso <span class="navbar-version">v{{VERSION}}</span></a>
+        </div>
+        <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown pointer" dropdown>
+                    <a class="dropdown-toggle" href="" id="entity-menu" dropdownToggle>
+                        <span>
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="hidden-sm">
+                                Account
+                            </span>
+                            <b class="caret"></b>
+                        </span>
+                    </a>
+                    <ul dropdownMenu role="menu" aria-labelledby="single-button">
+				      <li role="menuitem"><a [routerLink]="['signin']" class="dropdown-item">SignIn</a></li>
+			    	</ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -21,7 +21,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 @NgModule({
   imports: [CommonModule, SharedModule, Ng2BootstrapModule, ChartsModule],
   declarations: [ExposuresComponent, ExposureDetailsComponent, ExposureCollateralsComponent, ExposureSummaryComponent, ExposureUnderlyingsComponent, ExposureAllocationsComponent, DisputeCard, MTACard, RoundingCard, ThresholdCard
-],
+  ],
   exports: [ExposuresComponent, ExposureDetailsComponent, ExposureCollateralsComponent, ExposureSummaryComponent, ExposureUnderlyingsComponent, ExposureAllocationsComponent],
   providers: []
 })
