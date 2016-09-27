@@ -3,7 +3,7 @@ import {Statistic} from '../statistic';
 import {ChartConfiguration} from './chart-configuration';
 import {Collateral} from './../../../models/index';
 
-//import * as _ from 'lodash';
+import * as _ from 'lodash';
 
 export class CollateralStatisticFactory {
 
@@ -46,7 +46,7 @@ export class CollateralStatisticFactory {
   static valueBy(collaterals: Collateral[], group: string): ChartConfiguration {
 
     let result = new ChartConfiguration(new Array<string>(), new Array<number>());
-    /*
+    
     let values = _(collaterals).groupBy(group).map(function (value: any, key: any) {
       var sum = _.reduce(value, function (sum: number, collateral: Collateral) { return sum + collateral.value; }, 0);
       return new ValuePair(key, sum);
@@ -55,7 +55,7 @@ export class CollateralStatisticFactory {
     for (let entry of values) {
       result.push(entry.name, entry.value);
     }
-    */
+    
 
     return result;
   }
