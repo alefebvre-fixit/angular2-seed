@@ -1,6 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { FigureComponent} from '../../../shared/index';
 import { MTA} from '../../../models/index';
+import { Exposure} from '../../../models/index';
 
 @Component({
   moduleId: module.id,
@@ -13,11 +14,22 @@ import { MTA} from '../../../models/index';
 export class MTACard implements OnInit {
 
   @Input() mta: MTA;
+  @Input() exposure: Exposure;
 
   constructor() {}
 
   ngOnInit(): void {
     this.mta = new MTA();
+    this.exposure = new Exposure();
   }
+
+  getStatus(): string{
+    if (this.mta.value >= Math.abs(this.exposure.requiredMargin)){
+      return "above";
+    } else {
+      return "bellow";
+    }
+  }
+
 
 }

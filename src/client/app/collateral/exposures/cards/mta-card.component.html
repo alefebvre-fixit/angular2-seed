@@ -5,18 +5,28 @@
     <div class="panel-body">
         <table class="analytics-list">
             <tbody>
-                <tr>
-                    <td>Value</td>
-                    <td>
-                        <figure [value]="mta.value" [currency]="'USD'"></figure>
-                    </td>
-                </tr>
+
                 <tr>
                     <td>Entity</td>
                     <td>
                         {{mta.legalEntity}}
                     </td>
                 </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>
+                        <span class="label label-success" *ngIf="getStatus() == 'bellow'">Bellow</span>
+                        <span class="label label-warning" *ngIf="getStatus() == 'above'">Above</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Value</td>
+                    <td>
+                        <figure [value]="mta.value" [currency]="'USD'"></figure>
+                    </td>
+                </tr>
+
                 <tr>
                     <td>Rating</td>
                     <td>
