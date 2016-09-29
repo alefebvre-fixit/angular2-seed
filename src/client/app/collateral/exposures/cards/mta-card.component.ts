@@ -31,5 +31,10 @@ export class MTACard implements OnInit {
     }
   }
 
+  flipped = false;
+
+  flipCard(): void{
+    this.flipped = !this.flipped
+  }
 
 }

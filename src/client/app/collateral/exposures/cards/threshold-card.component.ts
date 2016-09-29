@@ -31,4 +31,10 @@ export class ThresholdCard implements OnInit {
     }
   }
 
+  flipped = false;
+
+  flipCard(): void{
+    this.flipped = !this.flipped
+  }
+
 }
