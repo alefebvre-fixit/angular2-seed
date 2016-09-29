@@ -56,6 +56,19 @@
 
 /* Sidebar Styles */
 
+.menu-item{
+    font-size: 110%;
+    background: #ffffff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.20);
+}
+
+.menu-sub-item{
+    font-size: 110%;
+    text-indent: 30px;
+    background: rgba(0,0,0,0.04);
+
+}
+
 .sidebar-nav {
     position: absolute;
     top: 0;

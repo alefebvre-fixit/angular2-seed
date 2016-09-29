@@ -105,12 +105,17 @@ export class DashboardComponent implements OnInit {
     }
   };
 
+  openDisputes(): void {
+    this.router.navigate(['/collateral/disputes']);
+  }
 
+  openCalls(): void {
+    this.router.navigate(['/collateral/calls']);
+  }
 
-
-
-
-
+  openExposures(): void {
+    this.router.navigate(['/collateral/exposures']);
+  }
 
 
 }

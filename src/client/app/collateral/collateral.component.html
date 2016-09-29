@@ -7,7 +7,6 @@
 
         <div id="sidebar-wrapper">
         
-        <accordion [closeOthers]="true">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a [routerLink]="['dashboard']">
@@ -30,6 +29,21 @@
                     </a>
                 </li>
                 <li>
+                    <a [routerLink]="['disputes']" class="menu-sub-item" [routerLinkActive]="['active-menu']">
+                        Disputes
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['calls']" class="menu-sub-item" [routerLinkActive]="['active-menu']">
+                        Calls
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['returns']" class="menu-sub-item" [routerLinkActive]="['active-menu']">
+                        Returns
+                    </a>
+                </li>
+                <li>
                     <a [routerLink]="['inventory']" class="menu-item" [routerLinkActive]="['active-menu']">
                         <i class="fa fa-list-ul" aria-hidden="false" style="display: initial;"></i> Inventory
                     </a>
@@ -44,31 +58,8 @@
                         <i class="fa fa-terminal" aria-hidden="false" style="display: initial;"></i> Kitchen Sink
                     </a>
                 </li>
-
-                <accordion-group>
-                    <li accordion-heading>
-                        <a [routerLink]="['exposures']" class="menu-item" [routerLinkActive]="['active-menu']">
-                            <i class="fa fa-exchange" aria-hidden="false" style="display: initial;"></i> Exposures
-                        </a>
-                    </li>
-                    <ul>
-                    <li>
-                        <a [routerLink]="['exposures']" class="menu-item" [routerLinkActive]="['active-menu']">
-                            <i class="fa fa-exchange" aria-hidden="false" style="display: initial;"></i> Disputes
-                        </a>
-                    </li>
-                    <li>
-                        <a [routerLink]="['exposures']" class="menu-item" [routerLinkActive]="['active-menu']">
-                            <i class="fa fa-exchange" aria-hidden="false" style="display: initial;"></i> Calls
-                        </a>
-                    </li>
-                    </ul>
-                </accordion-group>
-
-
             </ul>
 
-        </accordion>
 
 
 

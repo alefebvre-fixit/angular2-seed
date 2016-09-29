@@ -46,13 +46,13 @@
 
     <div class="row collateral-panel">
         <div class="col-md-4">
-            <ranked-list [datas]="disputes" [config]="disputesConfig"></ranked-list>
+            <ranked-list [datas]="disputes" [config]="disputesConfig" (more)="openDisputes($event)"></ranked-list>
         </div>
         <div class="col-md-4">
-            <ranked-list [datas]="topMarginCall" [config]="topMarginCallConfig"></ranked-list>
+            <ranked-list [datas]="topMarginCall" [config]="topMarginCallConfig" (more)="openCalls($event)"></ranked-list>
         </div>
         <div class="col-md-4">
-            <ranked-list [datas]="topExposures" [config]="topExposuresConfig"></ranked-list>
+            <ranked-list [datas]="topExposures" [config]="topExposuresConfig" (more)="openExposures($event)"></ranked-list>
         </div>
     </div>
 

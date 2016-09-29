@@ -24,6 +24,21 @@ export const CollateralRoutes: Route[] = [
         path: 'dashboard',
         component: DashboardComponent
       },
+
+      {
+        path: 'disputes',
+        component: ExposuresComponent
+      },
+      {
+        path: 'calls',
+        component: ExposuresComponent
+      },
+      {
+        path: 'returns',
+        component: ExposuresComponent
+      },
+
+
       {
         path: 'exposures',
         component: ExposuresComponent
