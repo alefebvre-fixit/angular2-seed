@@ -9,14 +9,15 @@ import { ExposuresService } from '../../services/index';
   styleUrls: ['exposure-list.component.css'],
   viewProviders: [ ExposuresService ],
 })
-export class ExposuresComponent implements OnInit {
+export class ExposuresComponent extends LoadingPage implements OnInit {
 
   exposures: Object[];
 
   private config: GridConfiguration;
 
   constructor(private router: Router, private exposuresService: ExposuresService) {
-  
+      super(false);
+
     this.config = new GridConfiguration(
               [{ "name": "id", "header": "Id"},
               { "name": "name", "header": "Name"},
@@ -34,6 +35,20 @@ export class ExposuresComponent implements OnInit {
   ngOnInit(): void {
     this.loadExposures();
   }
+
+  applyAction(action: string): void{
+
+
+
+    if (this.loading){
+      this.ready();
+    } else {
+      this.standby();
+      setTimeout(() => this.ready(), 750);
+    }
+  }
+
+
 
   loadExposures(): void {
     this.exposuresService.getAll().subscribe((exposures: Object[]) => {
@@ -57,10 +72,6 @@ export class ExposuresComponent implements OnInit {
     $event.stopPropagation();
     this.status.isopen = !this.status.isopen;
   }
-
-
-
-
 
 
 }
