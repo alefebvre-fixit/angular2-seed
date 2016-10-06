@@ -21,7 +21,7 @@ export class ExposureSummaryComponent implements OnInit {
 
   ngOnChanges(changes: SimpleChanges){
     if (this.exposure != undefined){
-        this.statistics = StatisticFactory.create(this.exposure);
+        this.statistics = StatisticFactory.createForOne(this.exposure);
     }
   }
 

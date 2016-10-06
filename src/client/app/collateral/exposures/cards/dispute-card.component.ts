@@ -20,4 +20,10 @@ export class DisputeCard implements OnInit {
     this.dispute = new Dispute();
   }
 
+  flipped = false;
+
+  flipCard(): void{
+    this.flipped = !this.flipped
+  }
+
 }

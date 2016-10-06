@@ -2,15 +2,18 @@
 
 <div class="tab-body">
 
+<statistics [datas]="statistics"></statistics>
+
 <grid [datas]="exposures" [config]="config" [loading]="loading" (view)="view($event)">                
                 <div class="btn-group" dropdown [(isOpen)]="status.isopen">
                 <button id="single-button" type="button" class="btn btn-primary" dropdownToggle [disabled]="disabled">
                 Action <span class="caret"></span>
                 </button>
                 <ul dropdownMenu role="menu" aria-labelledby="single-button">
-                <li role="menuitem"><a class="dropdown-item" (click)="applyAction('VALIDATE')">VALIDATE</a></li>
-                <li role="menuitem"><a class="dropdown-item" (click)="applyAction('ALLOCATE')">ALLOCATE</a></li>
                 <li role="menuitem"><a class="dropdown-item" (click)="applyAction('PRICE')">PRICE</a></li>
+                <li role="menuitem"><a class="dropdown-item" (click)="applyAction('ALLOCATE')">ALLOCATE</a></li>
+                <li role="menuitem"><a class="dropdown-item" (click)="applyAction('VALIDATE')">VALIDATE</a></li>
+                <li role="menuitem"><a class="dropdown-item" (click)="applyAction('EXECUTE')">EXECUTE</a></li>
                 <li class="divider dropdown-divider"></li>
                 <li role="menuitem"><a class="dropdown-item" (click)="applyAction('CANCEL')">CANCEL</a></li>
                 </ul>

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SectionComponent, LoadingPage, GridComponent, GridConfiguration} from '../../shared/index';
+import { FigureComponent, Statistics, Statistic, StatisticFactory} from '../../shared/index';
+
 import { ExposuresService } from '../../services/index';
+import { Exposure } from '../../models/index';
 
 @Component({
   moduleId: module.id,
@@ -11,9 +14,9 @@ import { ExposuresService } from '../../services/index';
 })
 export class ExposuresComponent extends LoadingPage implements OnInit {
 
-  exposures: Object[];
-
+  private exposures: Exposure[];
   private config: GridConfiguration;
+  private statistics: Statistic[];
 
   constructor(private router: Router, private exposuresService: ExposuresService) {
       super(false);
@@ -38,21 +41,24 @@ export class ExposuresComponent extends LoadingPage implements OnInit {
 
   applyAction(action: string): void{
 
-
-
     if (this.loading){
       this.ready();
     } else {
       this.standby();
+
+      let selected = this.exposures.filter(function (exposure: any) { return exposure.selected;})
+      console.log(selected);
+      this.exposuresService.applyActions(selected, action);
+      
+
       setTimeout(() => this.ready(), 750);
     }
   }
 
-
-
   loadExposures(): void {
-    this.exposuresService.getAll().subscribe((exposures: Object[]) => {
+    this.exposuresService.exposures$.subscribe((exposures: Exposure[]) => {
       this.exposures = exposures;
+      this.statistics = StatisticFactory.createForAll(this.exposures);
     });
   }
 

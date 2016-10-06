@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import {Observable, Subject} from 'rxjs/Rx';
-import {Collateral} from '../models/index';
+import { Observable, Subject } from 'rxjs/Rx';
+import { Collateral } from '../models/index';
 
 @Injectable()
 export class CollateralService {
